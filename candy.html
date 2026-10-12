@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ms"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Candy Akhlak – Adab Menziarahi Orang Sakit</title>
+<style>
+:root{--bg:#ffe3f1;--card:#fff;--tx:#3a2038;--pri:#e91e8c;--acc:#ff8a00;--ok:#2e9d4f;--bad:#e53935;--bd:#f6b9d8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1330;--card:#431f4d;--tx:#f8eefa;--bd:#7a3d8c}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,sans-serif;min-height:100vh}
+.w{max-width:480px;margin:0 auto;padding:12px}
+.card{background:var(--card);border:3px solid var(--bd);border-radius:20px;padding:14px;margin-bottom:10px;text-align:center}
+h1{font-size:24px;margin:6px 0;color:var(--pri)}
+.top{display:flex;justify-content:space-between;font-weight:700;margin-bottom:8px}
+.row{display:flex;justify-content:center;gap:5px;margin-bottom:10px;flex-wrap:wrap}
+.row i{width:26px;height:26px;border-radius:50%;background:var(--bd);display:block;font-style:normal;text-align:center;line-height:26px;font-size:18px}
+.row i.c{background:radial-gradient(circle at 30% 30%,#fff,#ff6bb5 40%,#c2185b);animation:pp .5s}
+.row i.n{outline:3px solid var(--acc)}
+@keyframes pp{50%{transform:scale(1.5)}}
+.big{font-size:56px;line-height:1.2}
+.q{font-size:20px;font-weight:700}
+.opts{display:flex;flex-direction:column;gap:12px}
+.cd{position:relative;border:0;border-radius:40px;padding:16px 22px;font-size:20px;font-weight:800;color:#fff;cursor:pointer;text-shadow:0 1px 3px rgba(0,0,0,.35);box-shadow:inset 0 -6px 0 rgba(0,0,0,.18),inset 0 6px 8px rgba(255,255,255,.5),0 5px 0 rgba(0,0,0,.2);animation:wob 2.5s ease-in-out infinite;transition:.3s}
+.cd:nth-child(1){background:linear-gradient(#ff6b6b,#d81b60)}
+.cd:nth-child(2){background:linear-gradient(#4dd0e1,#0288d1)}
+.cd:nth-child(3){background:linear-gradient(#a5d63f,#2e9d4f)}
+.cd:nth-child(2){animation-delay:.4s}.cd:nth-child(3){animation-delay:.8s}
+.cd::before,.cd::after{content:"";position:absolute;top:50%;margin-top:-14px;border:14px solid transparent}
+.cd::before{left:-22px;border-right-color:inherit;border-right-color:#ffd54f}
+.cd::after{right:-22px;border-left-color:#ffd54f}
+@keyframes wob{50%{transform:rotate(-1.5deg) scale(1.02)}}
+.cd.crush{animation:cr .7s forwards}
+@keyframes cr{30%{transform:scale(1.2) rotate(6deg)}100%{transform:scale(0);opacity:0}}
+.cd.no{background:linear-gradient(#9e9e9e,#616161)!important;animation:none}
+.cd.rev{outline:5px solid #fff176;animation:none}
+.cd.away{opacity:0;transform:scale(.2);pointer-events:none;animation:none}
+.pt{position:fixed;font-size:26px;pointer-events:none;z-index:9;animation:pt .9s forwards}
+@keyframes pt{to{transform:translate(var(--dx),var(--dy)) rotate(360deg);opacity:0}}
+.pw{display:flex;gap:6px;margin-top:14px}
+.pw button{flex:1;padding:8px 2px;border-radius:12px;border:2px solid var(--acc);background:var(--card);color:var(--tx);font-size:12px;cursor:pointer}
+.pw button:disabled{opacity:.35}
+.btn{display:block;text-align:center;text-decoration:none;background:var(--pri);color:#fff;border:0;border-radius:16px;padding:14px;font-size:18px;font-weight:700;width:100%;cursor:pointer;margin-top:8px}
+.btn.wa{background:#25d366}.btn.g{background:var(--acc)}
+input{width:100%;padding:12px;border-radius:12px;border:2px solid var(--bd);font-size:16px;background:var(--card);color:var(--tx)}
+#toast{position:fixed;left:50%;top:70px;transform:translateX(-50%);background:var(--acc);color:#fff;padding:10px 16px;border-radius:20px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:9;text-align:center}
+#toast.s{opacity:1}
+#fx{position:fixed;inset:0;pointer-events:none;display:flex;align-items:center;justify-content:center;font-size:110px;opacity:0;z-index:8}
+#fx.s{animation:pop 1s}
+@keyframes pop{0%{opacity:0;transform:scale(.3)}25%{opacity:1;transform:scale(1.1)}100%{opacity:0;transform:translateY(60px)}}
+.shake{animation:sh .5s}
+@keyframes sh{20%{transform:translateX(-12px)}40%{transform:translateX(12px)}60%{transform:translateX(-8px)}80%{transform:translateX(8px)}}
+.red{animation:rd .6s}@keyframes rd{30%{background:#ef9a9a}}
+.hide{display:none}.sc{font-size:54px;font-weight:800;color:var(--pri)}
+</style></head><body>
+<div id="toast"></div><div id="fx"></div>
+<div class="w" id="app">
+<div id="s0">
+ <div class="card"><div class="big">🍬🍭🍩</div><h1>Candy Akhlak</h1><div><b>Adab Menziarahi Orang Sakit</b></div><div>Akhlak Tahun 3 • 10 Soalan</div></div>
+ <div class="card" style="text-align:left;font-size:14px">🍬 Tekan <b>gula-gula</b> yang ada jawapan betul untuk memecahkannya!<br>✅ Betul +10 markah<br>🤢 Salah −5 markah (gula-gula jadi masam 😢)<br>🔥 3 betul berturut-turut = Power-up percuma!</div>
+ <input id="nm" placeholder="Nama anda" maxlength="30">
+ <button class="btn" id="go">🍭 Mula Main</button>
+</div>
+<div id="s1" class="hide">
+ <div class="top"><span id="qn">1/10</span><span id="st">🔥0</span><span id="sc">⭐ 0</span></div>
+ <div class="row" id="rw"></div>
+ <div class="card"><div class="big" id="qe"></div><div class="q" id="qt"></div></div>
+ <div class="opts" id="op"></div>
+ <div class="pw" id="pw"></div>
+</div>
+<div id="s2" class="hide">
+ <div class="card"><div style="font-size:60px" id="em"></div><div class="sc" id="fs"></div><div id="fd"></div></div>
+ <a class="btn wa" id="wa" target="_blank" rel="noopener noreferrer">📤 Hantar Markah ke WhatsApp</a>
+ <button class="btn" id="sh" style="background:#128c7e">📲 Kongsi (pilih WhatsApp)</button>
+ <button class="btn g" id="cp">📋 Salin Markah</button>
+ <button class="btn" id="re">🔁 Main Semula</button>
+</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const D=[
+["🏥","Apakah maksud menziarahi orang sakit?","Melawat orang yang sakit","Bermain dengan kawan","Tidur di rumah"],
+["🕒","Kita perlu memilih waktu ziarah yang...","Sesuai","Lewat malam","Waktu pesakit tidur"],
+["⏱️","Berapa lama kita patut menziarahi orang sakit?","Sekejap sahaja","Berjam-jam","Sehingga malam"],
+["💬","Kita perlu bercakap dengan kata-kata yang...","Baik","Kasar","Menakutkan"],
+["🔈","Kita bercakap dengan suara yang...","Lembut dan sopan","Kuat","Menjerit"],
+["🤲","Apa yang kita buat untuk orang sakit?","Mendoakan supaya cepat sembuh","Mengejeknya","Meninggalkannya"],
+["💪","Kita menasihati orang sakit supaya...","Bersabar","Marah-marah","Berputus asa"],
+["❤️","Orang yang menziarahi orang sakit disukai oleh...","Allah dan Rasul","Syaitan","Tiada sesiapa"],
+["🌈","Orang yang menziarahi orang sakit ditempatkan di...","Syurga","Neraka","Padang pasir"],
+["😞","Orang yang tidak beradab ketika ziarah tidak mendapat...","Rahmat Allah","Hadiah","Wang"]];
+const EM=['🍬','🍭','🍩'];
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const pick=(a,n)=>sh(a).slice(0,n);
+let AC;function snd(s,t='sine',v=.15){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();let x=AC.currentTime;s.forEach(([f,d])=>{const o=AC.createOscillator(),g=AC.createGain();o.type=t;o.frequency.setValueAtTime(f,x);g.gain.setValueAtTime(v,x);g.gain.exponentialRampToValueAtTime(.001,x+d);o.connect(g);g.connect(AC.destination);o.start(x);o.stop(x+d);x+=d*.8})}catch(e){}}
+const sOK=()=>snd([[523,.07],[659,.07],[784,.07],[1047,.07],[1319,.2]],'triangle'),sNO=()=>snd([[300,.2],[220,.25],[150,.4]],'sawtooth',.12),sPW=()=>snd([[784,.1],[988,.1],[1175,.1],[1568,.25]],'triangle'),sEnd=()=>snd([[523,.15],[659,.15],[784,.15],[659,.15],[784,.15],[1047,.4]],'triangle'),sTap=()=>snd([[500,.06]],'square',.05);
+let Q,i,score,streak,right,P,locked,dbl,shield,name,res;
+function show(n){['s0','s1','s2'].forEach(x=>$(x).classList.toggle('hide',x!=='s'+n))}
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('s');setTimeout(()=>t.classList.remove('s'),1500)}
+function fx(e){const f=$('fx');f.textContent=e;f.classList.remove('s');void f.offsetWidth;f.classList.add('s')}
+function burst(el){const r=el.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2;
+ for(let k=0;k<14;k++){const s=document.createElement('span');s.className='pt';s.textContent=['✨','🍬','⭐','💖'][k%4];s.style.left=cx+'px';s.style.top=cy+'px';
+  const a=Math.random()*6.28,d=80+Math.random()*120;s.style.setProperty('--dx',Math.cos(a)*d+'px');s.style.setProperty('--dy',Math.sin(a)*d+'px');document.body.appendChild(s);setTimeout(()=>s.remove(),1000)}}
+function start(){name=$('nm').value.trim()||'Pemain';try{localStorage.setItem('jn',name)}catch(e){}
+ Q=sh(D);i=0;score=0;streak=0;right=0;dbl=false;shield=false;P={f:1,s:0,h:0,d:0};res=Array(10).fill('');show(1);render()}
+function stats(){$('sc').textContent=`⭐ ${score}`;$('st').textContent=`🔥${streak}`}
+function rowUI(){$('rw').innerHTML=res.map((r,k)=>`<i class="${r}${k===i?' n':''}">${r==='x'?'🤢':''}</i>`).join('')}
+function pwUI(){$('pw').innerHTML='';[['f','💣','Bom gula'],['s','⏭️','Langkau'],['h','🛡️','Perisai'],['d','🌈','Pelangi x2']].forEach(([k,e,l])=>{const b=document.createElement('button');b.innerHTML=`${e} ${l}<br><b>${(k==='h'&&shield)||(k==='d'&&dbl)?'AKTIF':P[k]}</b>`;b.disabled=!P[k]||locked||(k==='d'&&dbl)||(k==='h'&&shield);b.onclick=()=>usePw(k);$('pw').appendChild(b)})}
+function render(){locked=false;const q=Q[i];
+ $('qn').textContent=`${i+1}/10`;$('qe').textContent=q[0];$('qt').textContent=q[1];stats();rowUI();
+ const o=$('op');o.innerHTML='';
+ sh([[q[2],1],[q[3],0],[q[4],0]]).forEach(([t,ok],k)=>{const e=document.createElement('button');e.className='cd';e._ok=ok;e.textContent=`${EM[k]} ${t}`;e.onclick=()=>ans(e);o.appendChild(e)});
+ pwUI()}
+function ans(e){if(locked)return;locked=true;
+ if(e._ok){burst(e);e.classList.add('crush');right++;streak++;const g=dbl?20:10;score+=g;res[i]='c';sOK();toast(`+${g} 🍬 Sedap!`);
+  if(streak===3||streak===6||streak===9){const k=pick(['f','s','h','d'],1)[0];P[k]++;setTimeout(()=>{sPW();toast('🔥 Ganjaran Power-up!')},800)}}
+ else{e.classList.add('no');e.textContent='🤢 '+e.textContent.slice(2);[...$('op').children].forEach(x=>x._ok&&x.classList.add('rev'));res[i]='x';
+  streak=0;sNO();fx('😢');$('app').classList.add('shake');document.body.classList.add('red');setTimeout(()=>{$('app').classList.remove('shake');document.body.classList.remove('red')},700);
+  if(shield){shield=false;toast('🛡️ Perisai melindungi markah!')}else{score=Math.max(0,score-5);toast('−5 markah 🤢 Masam!')}}
+ dbl=false;stats();rowUI();pwUI();setTimeout(()=>{i++;i>=10?end():render()},1500)}
+function usePw(k){if(locked||!P[k])return;
+ if(k==='f'){const w=[...$('op').children].filter(e=>!e._ok&&!e.classList.contains('away'));if(!w.length)return;burst(w[0]);w[0].classList.add('away');toast('💣 Satu jawapan salah dipecahkan!')}
+ if(k==='s'){P.s--;sPW();toast('⏭️ Dilangkau');locked=true;return setTimeout(()=>{i++;i>=10?end():render()},600)}
+ if(k==='h'){shield=true;toast('🛡️ Perisai aktif!')}if(k==='d'){dbl=true;toast('🌈 Markah x2!')}
+ P[k]--;sPW();pwUI()}
+function msg(){return `🍬 Candy Akhlak – Adab Menziarahi Orang Sakit (Tahun 3)\n👤 Nama: ${name}\n⭐ Markah: ${score}\n🍭 Betul: ${right}/10\n${right>=9?'🏆 Cemerlang!':right>=7?'👍 Bagus!':right>=5?'🙂 Boleh tahan':'💪 Perlu lebih latihan'}`}
+function end(){show(2);sEnd();$('em').textContent=right>=9?'🏆':right>=7?'🎉':right>=5?'🙂':'💪';$('fs').textContent=`${score} markah`;$('fd').textContent=`🍭 ${right}/10 betul`;fx('🎊');$('wa').href='https://api.whatsapp.com/send?text='+encodeURIComponent(msg())}
+$('go').onclick=()=>{sTap();start()};$('re').onclick=()=>{sTap();start()};
+$('sh').onclick=async()=>{try{if(navigator.share)await navigator.share({text:msg()});else throw 0}catch(e){try{await navigator.clipboard.writeText(msg());toast('Disalin – tampal di WhatsApp')}catch(_){prompt('Salin markah:',msg())}}};
+$('cp').onclick=async()=>{try{await navigator.clipboard.writeText(msg());toast('Disalin ✅')}catch(e){prompt('Salin markah:',msg())}};
+try{$('nm').value=localStorage.getItem('jn')||''}catch(e){}
+</script></body></html>
